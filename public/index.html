@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Agente IA Inmobiliario · Simulador WhatsApp</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <header class="side-head">
+        <h1>Inmo IA</h1>
+        <div class="tabs">
+          <button class="tab active" data-view="chats">Chats</button>
+          <button class="tab" data-view="admin">Panel</button>
+        </div>
+      </header>
+      <ul id="contacts" class="contacts"></ul>
+      <button id="newContact" class="new-contact">+ Nuevo contacto de prueba</button>
+    </aside>
+
+    <main id="chatView" class="chat">
+      <header class="chat-head">
+        <div class="avatar">🏠</div>
+        <div>
+          <div class="chat-title">Inmobiliaria · Asistente</div>
+          <div id="status" class="chat-sub">en línea</div>
+        </div>
+        <button id="reset" class="icon-btn" title="Reiniciar conversación">↺</button>
+      </header>
+      <div id="banner" class="banner hidden">👤 Chat derivado a un asesor comercial. El bot está en pausa.</div>
+      <section id="messages" class="messages"></section>
+      <form id="composer" class="composer">
+        <input id="input" autocomplete="off" placeholder="Escribí un mensaje" />
+        <button type="submit" class="send">➤</button>
+      </form>
+    </main>
+
+    <main id="adminView" class="admin hidden">
+      <h2>Panel comercial</h2>
+      <div class="grid">
+        <section><h3>Derivaciones</h3><div id="handoffs"></div></section>
+        <section><h3>Visitas agendadas</h3><div id="visits"></div></section>
+        <section class="wide"><h3>Leads</h3><div id="leads"></div></section>
+        <section class="wide"><h3>Propiedades</h3><div id="props"></div></section>
+      </div>
+    </main>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
